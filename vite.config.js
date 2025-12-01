@@ -15,7 +15,7 @@ export default defineConfig({
     sourcemap: false,
 
     // Optimiza el tamaño del bundle
-    minify: 'terser',
+    minify: 'esbuild',
 
     // Configuración de chunks
     rollupOptions: {
