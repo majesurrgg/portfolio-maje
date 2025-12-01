@@ -8,7 +8,7 @@ const Hero = ({ scrollToSection }) => {
                 <div className="mb-8 opacity-0 animate-fade-in" style={{ animation: 'fadeIn 1s ease-in forwards' }}>
                     <p className="text-lg mb-3" style={{ color: '#B7A8FF' }}>Hola, soy</p>
                     <h1 className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-purple-300 to-blue-400 bg-clip-text text-transparent">
-                        María Reyes
+                        María Jesus Reyes Gonzales
                     </h1>
                     <div className="space-y-2 mb-6">
                         <p className="text-2xl md:text-3xl font-semibold" style={{ color: '#E5E5E5' }}>

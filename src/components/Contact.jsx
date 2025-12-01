@@ -13,7 +13,7 @@ const Contact = () => {
                 </p>
 
                 <div className="flex gap-4 justify-center flex-wrap mb-12">
-                    <a href="mailto:maria.reyes@email.com"
+                    <a href="mailto:majesu.rg@gmail.com"
                         className="group px-8 py-4 rounded-full font-semibold flex items-center gap-3 transition-all duration-300 hover:scale-105 hover:shadow-xl"
                         style={{ backgroundColor: '#B7A8FF', color: '#0E0E12' }}>
                         <Mail size={20} />
@@ -40,7 +40,7 @@ const Contact = () => {
                     <p className="text-lg" style={{ color: '#C6C6C6' }}>
                         "La tecnología es más poderosa cuando empodera a las personas a resolver problemas reales."
                     </p>
-                    <p className="mt-4 font-semibold" style={{ color: '#B7A8FF' }}>— María Reyes</p>
+                    <p className="mt-4 font-semibold" style={{ color: '#B7A8FF' }}>— Maria Jesus Reyes G.</p>
                 </div>
             </div>
         </section>

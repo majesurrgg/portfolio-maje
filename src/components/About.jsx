@@ -11,7 +11,7 @@ const About = () => {
     ];
 
     return (
-        <section id="sobre-mi" className="py-24 px-6">
+        <section id="sobre-mi" className="py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center" style={{ color: '#B7A8FF' }}>
                     Sobre Mí

@@ -16,7 +16,7 @@ const Footer = () => {
                     <Logo />
                 </div>
                 <p className="mb-2" style={{ color: '#C6C6C6' }}>
-                    © 2024 María Reyes. Todos los derechos reservados.
+                    © 2024 María Jesus Reyes G. Todos los derechos reservados.
                 </p>
                 <p className="text-sm" style={{ color: '#6A5ACD' }}>
                     Diseñado con pasión por la tecnología y el diseño.
