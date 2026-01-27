@@ -20,14 +20,14 @@ const Contact = () => {
                         Enviar Email
                     </a>
 
-                    <a href="www.linkedin.com/in/maria-jesus-reyes-gonzales-b57662216" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.linkedin.com/in/maria-jesus-reyes-gonzales-b57662216/" target="_blank" rel="noopener noreferrer"
                         className="px-8 py-4 rounded-full font-semibold border-2 flex items-center gap-3 transition-all duration-300 hover:scale-105"
                         style={{ borderColor: '#1F77F0', color: '#1F77F0', backgroundColor: 'rgba(31, 119, 240, 0.05)' }}>
                         <Linkedin size={20} />
                         LinkedIn
                     </a>
 
-                    <a href="/cv.pdf" download
+                    <a href="/CV_MJRG2026.pdf" download
                         className="px-8 py-4 rounded-full font-semibold border-2 flex items-center gap-3 transition-all duration-300 hover:scale-105"
                         style={{ borderColor: '#B7A8FF', color: '#B7A8FF', backgroundColor: 'rgba(183, 168, 255, 0.05)' }}>
                         <Download size={20} />
