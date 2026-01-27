@@ -6,7 +6,7 @@ const Contact = () => {
         <section id="contacto" className="py-24 px-6" style={{ backgroundColor: 'rgba(17, 18, 26, 0.5)' }}>
             <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#B7A8FF' }}>
-                    Trabajemos Juntos =D
+                    Trabajemos Juntos
                 </h2>
                 <p className="text-xl mb-12" style={{ color: '#C6C6C6' }}>
                     Estoy abierta a nuevas oportunidades y colaboraciones. ¡Conectemos!
@@ -20,7 +20,7 @@ const Contact = () => {
                         Enviar Email
                     </a>
 
-                    <a href="www.linkedin.com/in/maria-jesús-reyes-gonzales-b57662216" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.linkedin.com/in/maria-jes%C3%BAs-reyes-gonzales-b57662216/" target="_blank" rel="noopener noreferrer"
                         className="px-8 py-4 rounded-full font-semibold border-2 flex items-center gap-3 transition-all duration-300 hover:scale-105"
                         style={{ borderColor: '#1F77F0', color: '#1F77F0', backgroundColor: 'rgba(31, 119, 240, 0.05)' }}>
                         <Linkedin size={20} />
