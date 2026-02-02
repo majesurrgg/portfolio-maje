@@ -27,6 +27,7 @@ const Skills = () => {
                     Habilidades
                 </h2>
 
+                {/* grid of cards */}
                 <div className="grid md:grid-cols-3 gap-6">
                     {skillsData.map((skill, i) => (
                         <div key={i}

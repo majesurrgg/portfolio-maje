@@ -17,6 +17,7 @@ const Navbar = ({ scrollY, activeSection, scrollToSection }) => {
         { id: 'sobre-mi', label: 'Sobre mí' },
         { id: 'habilidades', label: 'Habilidades' },
         { id: 'proyectos', label: 'Proyectos' },
+        { id: 'certificaciones', label: 'Certificaciones' },
         { id: 'contacto', label: 'Contacto' }
     ];
 
