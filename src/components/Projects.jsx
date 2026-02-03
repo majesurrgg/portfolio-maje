@@ -52,6 +52,7 @@ const Projects = () => {
                     Proyectos Destacados
                 </h2>
 
+                {/* grid de cards */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projectsData.map((project, i) => (
                         <div key={i}

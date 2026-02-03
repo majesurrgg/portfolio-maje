@@ -4,19 +4,19 @@ import { Code, Users, MessageSquare } from 'lucide-react';
 const Skills = () => {
     const skillsData = [
         {
-            title: 'Tecnología',
+            title: 'Stack Tecnológico',
             icon: <Code size={28} />,
-            items: ['Python', 'Java', 'React', 'SQL Server', 'Google Cloud Platform', 'Power BI', 'Data Warehouse', 'XML-RPC', 'Spring Boot']
+            items: ['Python (Scripting & Data)', 'Java', 'HTML5', 'React', 'SQL Server', 'Google Cloud', 'Power BI', 'Data Warehouse', 'Spring Boot (Básico)', 'Diseño de Dashboards & Conceptos ETL', 'Git & GitHub', 'Figma']
         },
         {
-            title: 'Consultoría TI',
+            title: 'Gestión y Metodologías',
             icon: <Users size={28} />,
-            items: ['Implementación ERP', 'Análisis funcional', 'Levantamiento de requerimientos', 'Documentación técnica', 'UAT y pruebas', 'Gestión de procesos']
+            items: ['Trello (Scrum &Kanban)', 'Administración cPanel', 'Implementación ERP', 'Análisis funcional', 'Levantamiento de requerimientos', 'Documentación técnica', 'Gestión de Backups', 'Soporte Técnico integral']
         },
         {
             title: 'Habilidades Blandas',
             icon: <MessageSquare size={28} />,
-            items: ['Comunicación efectiva', 'Organización', 'Aprendizaje rápido', 'Trabajo en equipo', 'Resolución de problemas', 'Adaptabilidad']
+            items: ['Liderazgo de equipos', 'Comunicación efectiva', 'Gestión del tiempo y Organización', 'Aprendizaje rápido', 'Trabajo en equipo', 'Resolución de problemas', 'Adaptabilidad', 'Pensamiento analítico']
         }
     ];
 
