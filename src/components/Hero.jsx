@@ -24,11 +24,13 @@ const Hero = ({ scrollToSection }) => {
                 </div>
 
                 <div className="flex gap-4 justify-center flex-wrap mt-10 opacity-0" style={{ animation: 'fadeIn 1s ease-in 0.3s forwards' }}>
-                    <button className="group px-8 py-4 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    
+                    <a href="/CV_MJRG2026.pdf" download
+                        className="group px-8 py-4 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-xl"
                         style={{ backgroundColor: '#B7A8FF', color: '#0E0E12' }}>
                         <Download size={15} />
                         Descargar CV
-                    </button>
+                    </a>
                     <button onClick={() => scrollToSection('contacto')}
                         className="group px-8 py-4 rounded-full font-semibold flex items-center gap-2 border-2 transition-all duration-300 hover:scale-105 hover:bg-opacity-10"
                         style={{ borderColor: '#B7A8FF', color: '#B7A8FF', backgroundColor: 'rgba(183, 168, 255, 0.05)' }}>
