@@ -27,7 +27,7 @@ const Contact = () => {
                         LinkedIn
                     </a>
 
-                    <a href="/CV_MJRG2026.pdf" download
+                    <a href="/docs/CV_MJRG2026.pdf" download
                         className="px-8 py-4 rounded-full font-semibold border-2 flex items-center gap-3 transition-all duration-300 hover:scale-105"
                         style={{ borderColor: '#B7A8FF', color: '#B7A8FF', backgroundColor: 'rgba(183, 168, 255, 0.05)' }}>
                         <Download size={20} />
