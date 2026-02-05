@@ -4,6 +4,17 @@ import { ExternalLink } from 'lucide-react';
 const Projects = () => {
     const projectsData = [
         {
+            title: 'Predicción Desnutrición Infantil AI',
+            desc: 'Investigación aplicando modelos de Machine Learning (Stacking Ensemble con XGBoost y Random Forest) para predecir el estado nutricional en niños de Arequipa usando Open Data.',
+            tags: ['Python', 'Machine Learning', 'Data Science']
+        },
+        {
+            title: 'Portafolio Personal',
+            desc: 'Desarrollo de sitio web personal con diseño moderno, funcionalidades interactivas y optimización de rendimiento.',
+            tags: ['React', 'JavaScript', 'Tailwind CSS', 'Vite.js', 'Lucide React'],
+            inProcess: true
+        },
+        {
             title: 'Implementación ERP e-robot',
             desc: 'Líder usuaria en implementación completa de sistema ERP, coordinación de equipos multidisciplinarios y aseguramiento de la adopción del sistema.',
             tags: ['ERP', 'Análisis Funcional', 'Liderazgo'],
@@ -47,7 +58,7 @@ const Projects = () => {
         },
         {
             title: 'Dashboard Power BI ventas bicicletería',
-            desc: 'Desarrollo de dashboard interactivo con Power BI para análisis de ventas de bicicletería.',
+            desc: 'Diseño e implementación de dashboard interactivo con Power BI para análisis multidimensional de ventas, inventarios y comportamiento de clientes de una bicicletería.',
             tags: ['Power BI', 'Analytics', 'Dashboard'],
             inProcess: true
         },
