@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppBtn from './components/WhatsAppBtn';
 
 const App = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -37,6 +38,7 @@ const App = () => {
       <Certifications />
       <Contact />
       <Footer />
+      <WhatsAppBtn />
     </div>
   );
 };
