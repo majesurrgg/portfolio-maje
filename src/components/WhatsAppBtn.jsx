@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Send, X } from 'lucide-react'; // Usamos los iconos de tu librería
 
-const WhatsAppBtn = () => {
+const WhatsAppBtn = ({ hide }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // mis datos configurados
@@ -13,13 +13,17 @@ const WhatsAppBtn = () => {
     setIsOpen(!isOpen);
   };
 
+  // SI hide ES TRUE (Menú abierto), NO RENDERIZAMOS NADA
+  if (hide) return null;
+
   return (
-    <div className="fixed bottom-10 right-4 md:bottom-10 md:right-8 z-50 flex flex-col items-end gap-3 md:gap-4">
+    <div className="fixed bottom-10 right-5 md:bottom-10 md:right-10 z-50 flex flex-col items-end gap-3 md:gap-4 transition-all duration-500 animate-in fade-in">
 
       {/* 1. VENTANA DEL CHAT (El "Modal") */}
       {/* solo se muestra si isOpen es true */}
       <div
-        className={`rounded-3xl shadow-2xl w-[calc(100vw-2rem)] sm:w-100 overflow-hidden border border-white/20 transition-all duration-300 origin-bottom-right transform ${isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-0 opacity-0 translate-y-10 pointer-events-none'
+        className={`rounded-3xl shadow-2xl w-[calc(100vw-2rem)] sm:w-100 overflow-hidden border border-white/20 transition-all duration-300 origin-bottom-right transform ${
+          isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-0 opacity-0 translate-y-10 pointer-events-none'
           }`}
         style={{ backdropFilter: 'blur(12px)', backgroundColor: 'rgba(255, 255, 255, 0.85)' }}
       >
@@ -76,7 +80,7 @@ const WhatsAppBtn = () => {
 
         <button
           onClick={toggleChat}
-          className="relative z-10 flex items-center justify-center w-14 h-14 md:w-18 md:h-18 bg-[#25D366] rounded-full shadow-lg hover:bg-[#1da851] transition-all hover:scale-110 active:scale-95"
+          className="relative z-10 flex items-center justify-center w-15 h-15 md:w-18 md:h-18 bg-[#25D366] rounded-full shadow-lg hover:bg-[#1da851] transition-all hover:scale-110 active:scale-95"
           aria-label={isOpen ? "Cerrar chat" : "Abrir chat"}
         >
           {/* Si está abierto muestra una X, si no, el logo de WhatsApp */}

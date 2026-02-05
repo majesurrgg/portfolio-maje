@@ -9,8 +9,7 @@ const Logo = () => (
     </svg>
 );
 
-const Navbar = ({ scrollY, activeSection, scrollToSection }) => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar = ({ scrollY, activeSection, scrollToSection, isMenuOpen, setIsMenuOpen }) => {
 
     const menuItems = [
         { id: 'inicio', label: 'Inicio' },
@@ -20,11 +19,6 @@ const Navbar = ({ scrollY, activeSection, scrollToSection }) => {
         { id: 'certificaciones', label: 'Certificaciones' },
         { id: 'contacto', label: 'Contacto' }
     ];
-
-    const handleMenuClick = (id) => {
-        scrollToSection(id);
-        setIsMenuOpen(false);
-    };
 
     return (
         <>
@@ -52,8 +46,8 @@ const Navbar = ({ scrollY, activeSection, scrollToSection }) => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden p-2 rounded-lg transition-colors"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className="md:hidden p-2 rounded-lg transition-colors z-50"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)} // Usa la función que viene de App
                         style={{ color: '#B7A8FF' }}
                         aria-label="Toggle menu"
                     >
@@ -65,14 +59,14 @@ const Navbar = ({ scrollY, activeSection, scrollToSection }) => {
             {/* Mobile Menu Overlay bug*/}
             {isMenuOpen && (
                 <div
-                    className="fixed inset-0 z-40 md:hidden"
+                    className={`fixed inset-0 z-40 md:hidden flex flex-col items-center justify-center gap-8 transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+                        }`}
                     style={{ backgroundColor: 'rgba(14, 14, 18, 0.98)', paddingTop: '80px' }}
-                >
-                    <div className="flex flex-col items-center gap-8 p-8">
+                >   
                         {menuItems.map((item, index) => (
                             <button
                                 key={item.id}
-                                onClick={() => handleMenuClick(item.id)}
+                                onClick={() => scrollToSection(item.id)} // Llama a la función que cierra el menú y hace scroll
                                 className="text-2xl font-semibold transition-all duration-300 hover:scale-110"
                                 style={{
                                     color: activeSection === item.id ? '#B7A8FF' : '#E5E5E5',
@@ -84,7 +78,7 @@ const Navbar = ({ scrollY, activeSection, scrollToSection }) => {
                             </button>
                         ))}
                     </div>
-                </div>
+              
             )}
 
             <style jsx>{`
