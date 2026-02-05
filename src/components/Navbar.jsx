@@ -65,7 +65,7 @@ const Navbar = ({ scrollY, activeSection, scrollToSection }) => {
             {/* Mobile Menu Overlay */}
             {isMenuOpen && (
                 <div
-                    className="fixed inset-0 z-40 md:hidden"
+                    className="fixed inset-0 z-[60] md:hidden flex flex-col items-center justify-start pt-24 gap-8"
                     style={{ backgroundColor: 'rgba(14, 14, 18, 0.98)', paddingTop: '80px' }}
                 >
                     <div className="flex flex-col items-center gap-8 p-8">
