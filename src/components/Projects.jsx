@@ -1,7 +1,70 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
+import DynamicIcon from './DynamicIcon';
 
 const Projects = () => {
+
+    // 1. DICCIONARIO DE COLORES (Se mantiene igual)
+    const brandColors = {
+        'Python': '#3776AB',
+        'Machine Learning': '#F7931E',
+        'Data Science': '#4B8BBE',
+        'React': '#61DAFB',
+        'JavaScript': '#F7DF1E',
+        'Tailwind CSS': '#06B6D4',
+        'Vite.js': '#646CFF',
+        'Power BI': '#F2C811',
+        'Analytics': '#F2C811',
+        'Dashboard': '#F2C811',
+        'Java': '#007396',
+        'XML-RPC': '#007396',
+        'Spring Boot': '#6DB33F',
+        'Fullstack': '#61DAFB',
+        'DW': '#CC2927',
+        'SQL Server': '#CC2927',
+        'Frontend': '#E34F26',
+        'UX/UI': '#FF61F6',
+        'Arquitectura': '#B7A8FF',
+        'Procesos': '#B7A8FF',
+        'Modelado': '#B7A8FF',
+        'Turtle': '#3776AB',
+        'Graphics': '#3776AB'
+    };
+
+    // 2. MAPEO DE NOMBRES (Ahora son STRINGs, no componentes)
+    // "Tecnología": "NombreDelIconoEnLaLibreria"
+    const techIconNames = {
+        'Python': 'SiPython',
+        'Machine Learning': 'SiPython',
+        'Data Science': 'SiPython',
+        'React': 'SiReact',
+        'JavaScript': 'SiJavascript',
+        'Tailwind CSS': 'SiTailwindcss',
+        'Vite.js': 'SiVite',
+        'Lucide React': 'SiReact',
+        'Frontend': 'SiHtml5',
+        'Power BI': 'SiPowerbi',
+        'Analytics': 'SiPowerbi',
+        'Dashboard': 'SiPowerbi',
+        'Java': 'FaJava',
+        'XML-RPC': 'FaJava',
+        'Spring Boot': 'SiSpringboot',
+        'Fullstack': 'FaJava',
+        'DW': 'FaDatabase',
+        'SQL Server': 'DiMsqlServer', // Usamos el de Devicons
+        'Turtle': 'SiPython',
+        'Graphics': 'SiPython',
+        'ERP': null,
+        'Análisis Funcional': null,
+        'Liderazgo': null,
+        'UX/UI': null,
+        'Arquitectura': null,
+        'Procesos': null,
+        'Modelado': null,
+        'Distribuido': null,
+    };
+
+
     const projectsData = [
         {
             title: 'Predicción Desnutrición Infantil AI',
@@ -103,14 +166,30 @@ const Projects = () => {
                                 {project.desc}
                             </p>
 
-                            <div className="flex flex-wrap gap-2">
-                                {project.tags.map((tag, j) => (
-                                    <span key={j}
-                                        className="px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
-                                        style={{ backgroundColor: 'rgba(183, 168, 255, 0.1)', color: '#B7A8FF', border: '1px solid rgba(183, 168, 255, 0.2)' }}>
-                                        {tag}
-                                    </span>
-                                ))}
+                            <div className="flex flex-wrap gap-2 mt-auto">
+
+                                {project.tags.map((tag, j) => {
+                                    // AQUI USAMOS EL NUEVO COMPONENTE
+                                    const iconName = techIconNames[tag];
+                                    const tagColor = brandColors[tag] || '#B7A8FF';
+
+                                    return (
+                                        <div key={j}
+                                            className="px-3 py-1 rounded-full text-xs md:text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
+                                            style={{
+                                                backgroundColor: `${tagColor}15`,
+                                                color: tagColor,
+                                                border: `1px solid ${tagColor}40`
+                                            }}>
+
+                                            {/* Pasamos el nombre string al componente */}
+                                            {iconName && (
+                                                <DynamicIcon name={iconName} size={14} className="flex-shrink-0" />
+                                            )}
+                                            <span>{tag}</span>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     ))}

@@ -11,7 +11,7 @@ const certifications = [
     institution: "Ingem (Corporación Soluciones de Gestión)",
     date: "Enero 2026",
     image: "/img/logo_igm.jpg", 
-    link: "/docs/CERT_PPMJRG.pdf", 
+    link: "/docs/#", 
     type: "work"
   },
   {
@@ -54,6 +54,7 @@ const certifications = [
 
 const Certifications = () => {
   const [selectedPdf, setSelectedPdf] = useState(null);
+  
   return (
     <section id="certificaciones" className="py-24 px-6" style={{ backgroundColor: 'rgba(17, 18, 26, 0.5)' }}>
       <div className="max-w-6xl mx-auto">
@@ -100,11 +101,10 @@ const Certifications = () => {
 
                 {/* Botón al final */}
 
-
                 <div className='mt-auto'>
                   <button
                     onClick={() => setSelectedPdf(item.link)}
-                    class="group border-2 px-6 py-3 my-2 flex items-center rounded-full transition-colors w-full justify-center
+                    className="group border-2 px-6 py-3 my-2 flex items-center rounded-full transition-colors w-full justify-center
                     bg-[rgba(183,168,255,0.1)]
                     text-[#B7A8FF]
                     border-[rgba(183,168,255,0.2)]

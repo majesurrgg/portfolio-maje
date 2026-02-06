@@ -17,13 +17,16 @@ const WhatsAppBtn = ({ hide }) => {
   if (hide) return null;
 
   return (
-    <div className="fixed bottom-10 right-5 md:bottom-10 md:right-10 z-50 flex flex-col items-end gap-3 md:gap-4 transition-all duration-500 animate-in fade-in">
+    // esta ventana de whatsapp no permitia clickear los botones, por eso se le agrego pointer-events-none cuando esta cerrada
+    // Esto permite que los clics pasen a través de las áreas vacías hacia los botones de abajo (CV, Credenciales).
+    <div className="fixed bottom-10 right-5 md:bottom-10 md:right-10 z-50 flex flex-col items-end gap-3 md:gap-4 transition-all duration-500 animate-in fade-in pointer-events-none">
 
       {/* 1. VENTANA DEL CHAT (El "Modal") */}
       {/* solo se muestra si isOpen es true */}
       <div
-        className={`rounded-3xl shadow-2xl w-[calc(100vw-2rem)] sm:w-100 overflow-hidden border border-white/20 transition-all duration-300 origin-bottom-right transform ${
-          isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-0 opacity-0 translate-y-10 pointer-events-none'
+      // CLAVE 2: Agregamos 'pointer-events-auto' para que el chat SÍ capture clics cuando esté abierto.
+          className={`rounded-3xl shadow-2xl w-[calc(100vw-2rem)] sm:w-100 overflow-hidden border border-white/20 transition-all duration-300 origin-bottom-right transform pointer-events-auto ${
+          isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-0 opacity-0 translate-y-10'
           }`}
         style={{ backdropFilter: 'blur(12px)', backgroundColor: 'rgba(255, 255, 255, 0.85)' }}
       >
@@ -73,7 +76,8 @@ const WhatsAppBtn = ({ hide }) => {
       </div>
 
       {/* 2. EL BOTÓN REDONDO FLOTANTE (Toggle) */}
-      <div className="relative group">
+      <div className="relative group pointer-events-auto">
+        {/* CLAVE 3: Agregamos 'pointer-events-auto' al contenedor del botón para que siempre sea clicable */}
         {!isOpen && (
           <span className="absolute inset-0 rounded-full bg-green-500 opacity-50 animate-ping duration-1000"></span>
         )}
