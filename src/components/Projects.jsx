@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
+import { FcBarChart } from 'react-icons/fc';
 import DynamicIcon from './DynamicIcon';
 
 const Projects = () => {
@@ -43,7 +44,7 @@ const Projects = () => {
         'Vite.js': 'SiVite',
         'Lucide React': 'SiReact',
         'Frontend': 'SiHtml5',
-        'Power BI': 'SiPowerbi',
+        'Power BI': 'FcBarChart',
         'Analytics': 'SiPowerbi',
         'Dashboard': 'SiPowerbi',
         'Java': 'FaJava',
